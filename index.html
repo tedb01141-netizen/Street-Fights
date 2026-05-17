@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>3D Fighting Game</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 1. The Core 3D Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- 2. The 3D Model Loader Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+
+    <!-- HUD / UI Layer (Health Bars & Timer) -->
+    <div id="ui-container">
+        <div class="player-hud">
+            <div class="name">PLAYER 1</div>
+            <div class="health-bar-container">
+                <div id="p1-health" class="health-bar"></div>
+            </div>
+        </div>
+        
+        <div id="timer">99</div>
+        
+        <div class="player-hud text-right">
+            <div class="name">PLAYER 2</div>
+            <div class="health-bar-container">
+                <div id="p2-health" class="health-bar" style="float: right;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Touch Controls Layout -->
+    <div id="controls">
+        <button id="btn-left">◀</button>
+        <button id="btn-right">▶</button>
+        <button id="btn-attack">ATTACK</button>
+    </div>
+
+    <!-- 3. Your Custom Game Logic Script -->
+    <script src="game.js"></script>
+</body>
+</html>
